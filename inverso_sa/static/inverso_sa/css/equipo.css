@@ -126,9 +126,36 @@
 }
 
 /* Adaptación a modo teléfono (usando la clase del script) */
-.phone-mode .dashboard-grid {
-    grid-template-columns: 1fr;
+/* Tablets y móviles grandes */
+@media (max-width: 1024px) {
+    .dashboard-grid { grid-template-columns: 1fr; gap: 15px; }
+    .levels-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 }
-.phone-mode .levels-grid {
-    grid-template-columns: 1fr;
+
+/* Teléfonos estándar (<=768px) */
+@media (max-width: 768px) {
+    .levels-grid { grid-template-columns: 1fr; gap: 6px; }
+    .main-header h1 { font-size: clamp(20px, 5vw, 22px); }
+}
+
+/* Teléfonos pequeños (<=480px) */
+@media (max-width: 480px) {
+    .card-section { padding: clamp(10px, 3vw, 15px); }
+    .share-box { padding: clamp(8px, 2.5vw, 12px); gap: 10px; }
+    .reward-item { padding: clamp(8px, 2vw, 12px); gap: 8px; }
+}
+
+/* Teléfonos muy pequeños (<=360px) */
+@media (max-width: 360px) {
+    .main-header h1 { font-size: 18px; margin: 15px 0; }
+    .btn-get { padding: 3px 8px; font-size: 0.7rem; }
+    .badge { width: 18px; height: 18px; font-size: 0.65rem; }
+}
+
+/* Pantallas grandes / TV (>=1600px) */
+@media (min-width: 1600px) {
+    .dashboard-grid { grid-template-columns: 1.5fr 1fr; gap: 25px; }
+    .levels-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .card-section { padding: 30px; border-radius: 18px; }
+    .main-header h1 { font-size: 32px; margin: 40px 0; }
 }

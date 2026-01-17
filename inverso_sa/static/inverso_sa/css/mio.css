@@ -268,6 +268,29 @@ body {
 }
 
 /* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .user-header, .balance-card-inverso {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links { display: none; }
+    .main-content { padding: 0 10px; }
+    .balance-card-inverso { padding: 20px 10px; }
 }
+
+@media (max-width: 480px) {
+    .user-header h1 { font-size: 1.5rem; }
+    .balance-item .amount { font-size: 1.5rem; }
+    .btn-box { padding: 15px; font-size: 0.9rem; }
+    .func-item { padding: 15px; gap: 10px; }
+}
+

@@ -446,24 +446,29 @@ body.dark-mode .footer {
 }
 
 /* ================= RESPONSIVE ================= */
+@media (max-width: 1400px) {
+    .cards-container { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .main-wrapper { margin-left: 240px; }
+    .sidebar { width: 240px; }
+}
+
 @media (max-width: 1200px) {
+    .cards-container { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .main-wrapper { margin-left: 220px; }
+    .sidebar { width: 220px; }
+}
+
+@media (max-width: 992px) {
     .cards-container { grid-template-columns: 1fr; }
+    .main-wrapper { margin-left: 200px; }
+    .sidebar { width: 200px; }
+    .footer { margin-left: 200px; }
 }
 
 @media (max-width: 768px) {
-    .sidebar { width: 240px; padding: 20px; }
-    .main-wrapper { margin-left: 240px; }
-    .footer { margin-left: 240px; }
-    .header { padding: 20px; }
-    .main-content { padding: 20px; }
-    .header h1 { font-size: 22px; }
-    .card-value { font-size: 24px; }
-}
-
-@media (max-width: 600px) {
-    .sidebar { width: 200px; padding: 15px 10px; }
-    .main-wrapper { margin-left: 200px; }
-    .footer { margin-left: 200px; }
+    .sidebar { width: 180px; padding: 15px; }
+    .main-wrapper { margin-left: 180px; }
+    .footer { margin-left: 180px; }
     .header { padding: 16px; }
     .main-content { padding: 16px; }
     .brand-name { display: none; }
@@ -471,77 +476,11 @@ body.dark-mode .footer {
     thead th, tbody td { padding: 8px; }
 }
 
-
-.card {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: 12px;
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.styled-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.styled-table th,
-.styled-table td {
-    padding: 12px;
-    border-bottom: 1px solid #2c2f55;
-}
-
-.styled-table th {
-    text-align: left;
-    color: var(--text-muted);
-}
-
-.actions {
-    display: flex;
-    gap: 8px;
-}
-
-.btn-sm {
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    text-decoration: none;
-}
-
-.btn-sm.edit {
-    background: #3a7afe;
-    color: #fff;
-}
-
-.btn-sm.delete {
-    background: #e74c3c;
-    color: #fff;
-}
-
-.badge {
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-}
-
-.badge.success {
-    background: #2ecc71;
-}
-
-.badge.danger {
-    background: #e74c3c;
+@media (max-width: 480px) {
+    .sidebar { width: 150px; padding: 10px; }
+    .main-wrapper { margin-left: 150px; }
+    .footer { margin-left: 150px; }
+    .header h1 { font-size: 18px; }
+    .card-value { font-size: 20px; }
+    .cards-container { gap: 16px; }
 }

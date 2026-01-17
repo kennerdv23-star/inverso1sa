@@ -115,13 +115,19 @@ body.dark-mode .modal-content {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (min-width: 1600px) {
     .modal-content {
-        width: 95%;
-        margin: 30px auto;
+        max-width: 900px;
+        padding: 30px;
     }
-    .modal-footer {
-        flex-direction: column;
-        gap: 8px;
+
+    .recargas-table th,
+    .recargas-table td {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .close-modal {
+        font-size: 28px;
     }
 }

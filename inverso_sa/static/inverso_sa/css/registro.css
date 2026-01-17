@@ -159,11 +159,25 @@ body, html {
     margin-left: 5px;
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 600px) {
     .form-grid {
         grid-template-columns: 1fr;
     }
 }
+
+
+@media (min-width: 1600px) {
+    .register-card {
+        max-width: 600px;
+        padding: 60px;
+        border-radius: 32px;
+    }
+    .brand-title {
+        font-size: 2rem;
+    }
+}
+
 
 @keyframes fadeInUp {
     from {
